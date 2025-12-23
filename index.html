@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EPOS.US</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-gray-900 antialiased">
+
+<!-- ========================== HEADER ========================== -->
+<header class="flex justify-between items-center px-4 md:px-10 py-4 md:py-5 border-b border-gray-300 sticky top-0 bg-white z-50 shadow">
+  <div class="flex items-center">
+  <img 
+    src="logo.png" 
+    alt="Parijat Logo"
+    class="h-14 w-auto max-h-14 object-contain"
+  >
+</div>
+  <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-800">
+    <button onclick="showTab('aluminium')" class="hover:text-blue-600 transition">Aluminium Extrusion</button>
+    <button onclick="showTab('sequential')" class="hover:text-blue-600 transition">EMMT-Sequential Process</button>
+  </nav>
+
+  <button class="md:hidden text-gray-800" onclick="toggleMenu()">☰</button>
+
+  <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 w-full bg-gray-100 border-b border-gray-300 shadow">
+    <button onclick="showTab('aluminium'); toggleMenu()" class="block w-full text-left px-6 py-4 hover:bg-gray-200">Aluminium Extrusion</button>
+    <button onclick="showTab('sequential'); toggleMenu()" class="block w-full text-left px-6 py-4 hover:bg-gray-200">EMMT-Sequential Process</button>
+  </div>
+</header>
+<!-- ==================== TAB 1 : ALUMINIUM ================== -->
+
+
+<section id="aluminium" class="tab-section">
+
+  <!-- HERO -->
+  <section class="px-4 md:px-10 py-12 md:py-16">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-6 text-blue-600 text-center">
+      Parijat Aluminum Extrusion SCADA
+      <br>
+      <span class="text-xl md:text-2xl font-semibold block mt-1">
+        NGSH-0701
+      </span>
+    </h1>
+
+    <p class="max-w-5xl text-black leading-relaxed">
+      The goal for extrusion operations is to produce the highest quality product at the lowest possible cost.
+      Securing this efficiently requires a change in paradigm from operators pushing buttons and manually collecting
+      data – to presses running in complete automatic, performance and production data being collected and transferred
+      to the business ERP system, while operators function as technicians improving quality and productivity.
+    </p>
+  </section>
+  <!-- IMAGES SECTION -->
+  <section class="px-4 md:px-10 pt-6 pb-12 md:pt-8 md:pb-16 grid md:grid-cols-2 gap-10 items-center">
+
+    <div class="flex justify-center">
+      <img
+        src="typical aluminium.jpg"
+        alt="Typical Aluminum Extrusion Solution"
+        class="w-[100%] md:w-[100%] lg:w-[75%] rounded-lg shadow-lg"
+      />
+    </div>
+
+    <div class="flex justify-center">
+      <img
+        src="pci aluminium.png"
+        alt="PCI Aluminum Extrusion Solution"
+        class="w-[90%] md:w-[95%] lg:w-[100%] rounded-lg shadow-lg"
+      />
+    </div>
+
+  </section>
+  <!-- TWO COLUMN TEXT -->
+  <section class="px-4 md:px-10 pb-16 md:pb-24 grid md:grid-cols-2 gap-8 md:gap-12 text-black-600">
+
+    <p>
+      A Typical aluminum extrusion system solution consists of various software silos or islands from different 
+      vendors' software products with multiple copies of data, also requiring a lot of manual data entry 
+      activities that are prone to human errors.
+    </p>
+
+    <p>
+      PCI solution combines all of these activities into a single software application with a single copy of data. 
+      This eliminates any data integrity complications & vulnerability to human data entry errors.
+    </p>
+
+  </section>
+  <!-- AUTOMATION -->
+  <section class="px-4 md:px-10 pt-10 pb-16 md:pt-12 md:pb-20 bg-[#f5f7fa]">
+
+    <h2 class="text-3xl font-semibold mb-6 text-black">
+      Automation
+    </h2>
+
+    <p class="max-w-6xl text-black leading-relaxed mb-6">
+      To get to this level, the press system – beginning with the 
+      <span class="text-blue-600 font-semibold">billet / log heating</span> and cutting system;
+      <span class="text-blue-600 font-semibold">billet loading</span> system; press cycle,
+      <span class="text-blue-600 font-semibold">auto die change</span>; lead-out table, hot saw, puller;
+      profile handling transfer; stretching system; cold / finish saw infeed, cutting, queuing,
+      and offloading systems must be balanced.
+      Quenching (air / water), PLCs communicating in 
+      <span class="text-blue-600 font-semibold">closed-loop automation</span>, and process adjustments
+      ensure the system runs with minimal operator intervention.
+    </p>
+
+    <p class="text-black font-semibold mb-6">
+      Examples of this type of automation are:
+    </p>
+
+    <ul class="grid md:grid-cols-2 gap-4 list-decimal list-inside text-black">
+      <li>Automatic billet call settings based on press ram speed, billet length and dead cycle time.</li>
+      <li>Die Copy actual weight per unit length calculation based on puller positioning and billet size.</li>
+      <li>Automatic adjustment of billet length to maximize recovery, minimize press time.</li>
+      <li>Billet length calculations based on last recorded weight per unit length of die copy.</li>
+      <li>Smoother & faster press cycle & smaller dead cycle time.</li>
+      <li>Safety interlocks – puller curtains, hot saw protection, press alarms.</li>
+      <li>Auto generated shift reports & statistics.</li>
+      <li>Automatic burp pressure settings.</li>
+      <li>Hot saw positioning optimization.</li>
+      <li>Automatic extrudate release via recipe.</li>
+      <li>Ram speed adjustment via thermal feedback.</li>
+      <li>Finish saw automation.</li>
+    </ul>
+
+  </section>
+  <!-- COMMUNICATIONS -->
+  <section class="px-4 md:px-10 py-16 md:py-20 bg-[#faf7f2]">
+
+    <h2 class="text-3xl font-semibold mb-6 text-black">
+      Communications & Data Collection
+    </h2>
+
+    <p class="max-w-6xl text-black leading-relaxed mb-6">
+      Up till now data collection and analysis was quite arduous – many times data is not thoroughly
+      collected or analyzed to determine what is preventing current systems from running optimally –
+      getting to the root cause is the key. Even the oldest presses have the potential to run in full
+      automatic or semi-automatic. Parijat SCADA data collection system will provide real-time press
+      performance and identify roadblocks to excellence. The integrated system provides cost-saving
+      models by addressing issues that prevent profitable press operation.
+    </p>
+
+    <p class="max-w-6xl text-black leading-relaxed mb-6">
+      Once the press system is functioning at full potential, optimum recipes (press parameters)
+      can be generated beginning with the highest-volume shapes. These recipes get automatically
+      pushed into PLCs, reducing operator keystrokes and minimizing human error. The extensive
+      recipe and process optimization capability leverages Parijat PLC programs, software, and
+      domain knowledge of aluminum extrusion.
+    </p>
+
+    <button onclick="toggleCommList()" 
+            class="text-blue-600 font-bold text-xl mb-4 flex items-center gap-2 focus:outline-none">
+        This is done by focusing on total end-to-end systems integration:
+        <span id="commIcon" class="transition text-blue-500">▼</span>
+    </button>
+
+    <ul id="commList" class="hidden grid md:grid-cols-2 gap-4 list-decimal list-inside text-black text-lg mt-4">
+
+      <li class="hover:bg-[#f0eae2] transition rounded-lg p-2 cursor-pointer">
+        Develop drivers and software to integrate existing press PLCs with ERP/MRP systems or perform ERP functions.
+      </li>
+
+      <li class="hover:bg-[#f0eae2] transition rounded-lg p-2 cursor-pointer">
+        Extensive die management system with profile-level analysis and automatic die change capability.
+      </li>
+
+      <li class="hover:bg-[#f0eae2] transition rounded-lg p-2 cursor-pointer">
+        Presales quoting system with production estimates and optimum die-hole recommendations.
+      </li>
+
+      <li class="hover:bg-[#f0eae2] transition rounded-lg p-2 cursor-pointer">
+        Smart press scheduling with billet optimization, hot saw position, multi-drags, and multi-push calculations.
+      </li>
+
+      <li class="hover:bg-[#f0eae2] transition rounded-lg p-2 cursor-pointer">
+        Automatic collection of labor, billet count, alloy details, weight per unit length, and run success.
+      </li>
+
+      <li class="hover:bg-[#f0eae2] transition rounded-lg p-2 cursor-pointer">
+        Collection of real downtime or lost time — enabling root-cause-based optimization.
+      </li>
+
+      <li class="hover:bg-[#f0eae2] transition rounded-lg p-2 cursor-pointer">
+        Integration of smart industrial buses (Ethernet, ControlNet, DeviceNet, Profinet, IO-Link).
+      </li>
+
+    </ul>
+
+  </section>
+
+  <!-- IMAGES + DESCRIPTION -->
+  <section class="px-4 md:px-10 py-12 md:py-16 grid md:grid-cols-2 gap-10">
+
+    <div class="rounded-xl overflow-hidden flex items-center justify-center bg-transparent">
+      <img 
+        src="time distibution.png" 
+        alt="Time Distribution" 
+        class="w-[60%] md:w-[50%] object-contain drop-shadow-xl"
+      >
+    </div>
+
+    <div class="rounded-xl p-4 text-black leading-relaxed bg-white shadow-md">
+      Contact time is the time the press is under pressure (paid time). Dead Cycle Time is based on actual press 
+      dead cycle averages and billet count. Cleanup, log oven issues, meetings, and die setup add to downtime. 
+      Over 10% of production time is often unaccounted for. Once analyzed against ideal recipe performance, 
+      another 10% efficiency loss is usually found. Parijat aims to recover this time, reduce cost, and open 
+      additional production capacity.
+    </div>
+
+  </section>
+
+  <!-- ALUMINUM EXTRUSION ARCHITECTURE -->
+  <section class="px-4 md:px-10 py-16 bg-white text-black">
+
+  <!-- Title (Centered) -->
+  <h2 class="text-3xl font-bold text-blue-700 mb-10 text-center">
+    Aluminum Extrusion Plant Integration Architecture
+  </h2>
+
+  <!-- Left Image + Right Text Layout -->
+  <div class="grid md:grid-cols-2 gap-10 items-center">
+
+    <!-- LEFT: Image -->
+    <div class="flex justify-center">
+      <img 
+        src="aluminium.drawio.svg" 
+        alt="Extrusion Architecture Diagram"
+        class="w-[80%] md:w-[90%] lg:w-[80%] rounded-lg shadow-lg"
+      >
+    </div>
+
+    <!-- RIGHT: Text -->
+    <div class="text-gray-700 text-lg leading-relaxed">
+      This architecture illustrates a complete, end-to-end digital ecosystem for an aluminum extrusion plant. It connects enterprise systems with plant-floor operations to ensure seamless production, monitoring, and optimization.<br/>
+<br/>
+At the top, ERP/MES handles business-level planning, which flows into the extrusion optimization system responsible for press scheduling, billet planning, and energy throughput.<br/>
+<br/>
+Downstream, the architecture covers billet preparation, material handling, press control automation, inspection systems, and downstream processes such as aging, anodizing, machining, and finished-goods logistics.<br/>
+<br/>
+Environmental monitoring, safety controls, and predictive maintenance ensure reliable, efficient, and compliant operations. Overall, the system integrates all departments—from raw billet to dispatch—into one coordinated digital workflow.<br/>
+    </div>
+</div>
+</section>
+  <!-- PRESS CONFIG FORM -->
+  <section class="px-4 md:px-10 py-16 md:py-20 bg-[#e8f3ff]">
+
+  <!-- Toggle Button -->
+  <button onclick="toggleForm()" 
+          class="w-full text-left bg-white border border-blue-200 rounded-xl px-6 py-5 hover:bg-blue-50 transition shadow-sm">
+      
+      <h2 class="text-2xl font-semibold text-black">
+        To begin the process, Parijat requires as much detailed information on press configurations as follows
+      </h2>
+      <p class="text-black mt-2">Click to expand and provide press configuration details</p>
+  </button>
+
+  <!-- FORM CONTAINER (Hidden Initially) -->
+  <div id="pressForm" 
+       class="hidden mt-8 bg-white border border-blue-200 rounded-xl p-6 md:p-10 shadow-md">
+
+    <!-- ✅ FORM UPDATED FOR EMAIL SEND -->
+    <form 
+      action="https://formspree.io/f/xdanywel"
+      method="POST"
+      class="grid md:grid-cols-2 gap-6 text-black"
+    >
+
+      <!-- BASIC DETAILS -->
+      <input name="Press Name or Designation" class="form-input border border-gray-300 rounded-md p-3" placeholder="Press Name or Designation" />
+      <input name="PLC make/model" class="form-input border border-gray-300 rounded-md p-3" placeholder="PLC make / model (if any)" />
+      <input name="HMI make/model" class="form-input border border-gray-300 rounded-md p-3" placeholder="HMI make / model (if any)" />
+      <input name="ERP Software" class="form-input border border-gray-300 rounded-md p-3" placeholder="ERP Software (if any)" />
+      <input name="MES Software" class="form-input border border-gray-300 rounded-md p-3" placeholder="MES Software (if any)" />
+      <input name="Other peripheral software" class="form-input border border-gray-300 rounded-md p-3" placeholder="Other peripheral software in use" />
+
+      <!-- LOG OVEN -->
+      <h3 class="md:col-span-2 text-xl font-semibold pt-6 text-black">Log Oven</h3>
+
+      <input name="Log diameter" class="form-input border-gray-300 rounded-md p-3" placeholder="Log diameter" />
+      <input name="Maximum log length" class="form-input border-gray-300 rounded-md p-3" placeholder="Maximum log length" />
+      <input name="Minimum log length" class="form-input border-gray-300 rounded-md p-3" placeholder="Minimum log length" />
+      <input name="Maximum billet length" class="form-input border-gray-300 rounded-md p-3" placeholder="Maximum billet length (press)" />
+      <input name="Production capacity" class="form-input border-gray-300 rounded-md p-3" placeholder="Production capacity (kg/hour)" />
+      <input name="Type of fuel" class="form-input border-gray-300 rounded-md p-3" placeholder="Type of fuel" />
+      <input name="Log shearing force" class="form-input border-gray-300 rounded-md p-3" placeholder="Log shearing force" />
+      <input name="Tapering zone" class="form-input border-gray-300 rounded-md p-3" placeholder="Tapering zone" />
+      <input name="Thermocouples" class="form-input border-gray-300 rounded-md p-3" placeholder="No. of thermocouples (zones)" />
+      <input name="Furnace length" class="form-input border-gray-300 rounded-md p-3" placeholder="Furnace length" />
+      <input name="Heat recuperating unit length" class="form-input border-gray-300 rounded-md p-3" placeholder="Heat recuperating unit length" />
+      <input name="Maximum billet temperature" class="form-input border-gray-300 rounded-md p-3" placeholder="Maximum billet temperature" />
+      <input name="Temperature uniformity" class="form-input border-gray-300 rounded-md p-3" placeholder="Temperature uniformity" />
+      <input name="Log/billet storage" class="form-input border-gray-300 rounded-md p-3" placeholder="No. of logs / billet storage" />
+
+      <!-- BILLET HANDLING SYSTEM -->
+      <h3 class="md:col-span-2 text-xl font-semibold pt-6 text-black">Billet Handling System</h3>
+
+      <input name="Log shear / cut billet" class="form-input border-gray-300 rounded-md p-3" placeholder="Log shear / log saw / cut billet" />
+      <input name="Transfer method" class="form-input border-gray-300 rounded-md p-3" placeholder="Transfer to press loader method" />
+      <input name="Cutting tolerance" class="form-input border-gray-300 rounded-md p-3" placeholder="Cutting tolerance" />
+      <input name="Cycle time" class="form-input border-gray-300 rounded-md p-3 md:col-span-2" placeholder="Cycle time from furnace open to billet load" />
+      <input name="Billet temp" class="form-input border-gray-300 rounded-md p-3" placeholder="Billet temperature while cutting" />
+
+      <!-- PRESS -->
+      <h3 class="md:col-span-2 text-xl font-semibold pt-6 text-black">Press</h3>
+
+      <input name="Tonnage" class="form-input border-gray-300 rounded-md p-3" placeholder="Tonnage" />
+      <input name="Manufacturer" class="form-input border-gray-300 rounded-md p-3" placeholder="Manufacturer" />
+      <input name="Date of manufacture" class="form-input border-gray-300 rounded-md p-3" placeholder="Date of manufacture" />
+      <input name="Last upgrade" class="form-input border-gray-300 rounded-md p-3" placeholder="Last upgrade" />
+      <input name="PLC and model" class="form-input border-gray-300 rounded-md p-3" placeholder="PLC and model" />
+      <input name="High pressure pumps" class="form-input border-gray-300 rounded-md p-3" placeholder="No. of high pressure pumps & manufacturer" />
+      <input name="Hydraulic pressure" class="form-input border-gray-300 rounded-md p-3" placeholder="Working hydraulic pressure" />
+      <input name="Max billet diameter" class="form-input border-gray-300 rounded-md p-3" placeholder="Maximum billet diameter (cold)" />
+      <input name="Max billet length extruded" class="form-input border-gray-300 rounded-md p-3" placeholder="Maximum billet length extruded" />
+      <input name="Max extrusion speed" class="form-input border-gray-300 rounded-md p-3" placeholder="Maximum extrusion speed" />
+      <input name="Dead cycle with burb" class="form-input border-gray-300 rounded-md p-3" placeholder="Dead cycle time (with burb cycle)" />
+      <input name="Dead cycle without burb" class="form-input border-gray-300 rounded-md p-3" placeholder="Dead cycle time (without burb cycle)" />
+      <!-- ================= CONTAINER HEATING ================= -->
+<h3 class="md:col-span-2 text-xl font-semibold pt-6 text-black">
+  Container Heating
+</h3>
+
+<input name="Container Heating Type" class="form-input border-gray-300 rounded-md p-3" placeholder="Container Heating – radial, longitudinal, multizone" />
+<input name="Loading Type" class="form-input border-gray-300 rounded-md p-3" placeholder="Front loading, rear loading, moving stem?" />
+<input name="Stem Dummy Type" class="form-input border-gray-300 rounded-md p-3" placeholder="Stem dummy fixed or loose" />
+<input name="Dummy Size & Length" class="form-input border-gray-300 rounded-md p-3" placeholder="Dummy size and length (if any)" />
+
+
+<!-- ================= TOOLING SIZE ================= -->
+<h3 class="md:col-span-2 text-xl font-semibold pt-6 text-black">
+  Tooling Size
+</h3>
+
+<input name="Diameter of Die Ring" class="form-input border-gray-300 rounded-md p-3" placeholder="Diameter of die ring" />
+<input name="Tool Thickness" class="form-input border-gray-300 rounded-md p-3" placeholder="Thickness" />
+<input name="Die Slide / Shuffle / Gate Lock" class="form-input border-gray-300 rounded-md p-3" placeholder="Die Slide, Die Shuffle, Gate lock" />
+<input name="Bolster Size" class="form-input border-gray-300 rounded-md p-3" placeholder="Bolster size" />
+
+
+<!-- ================= BUTT SHEAR ================= -->
+<h3 class="md:col-span-2 text-xl font-semibold pt-6 text-black">
+  Butt Shear
+</h3>
+
+<input name="Blade Type Manufacturer" class="form-input border-gray-300 rounded-md p-3" placeholder="Blade type - manufacturer" />
+<input name="Knocker" class="form-input border-gray-300 rounded-md p-3" placeholder="Knocker" />
+<input name="Maximum Load" class="form-input border-gray-300 rounded-md p-3" placeholder="Maximum load" />
+
+
+<!-- ================= HOT SAW ================= -->
+<h3 class="md:col-span-2 text-xl font-semibold pt-6 text-black">
+  Hot Saw
+</h3>
+
+<input name="Hot Saw Manufacturer Date" class="form-input border-gray-300 rounded-md p-3" placeholder="Manufacturer / Date" />
+<input name="Saw Blade Diameter" class="form-input border-gray-300 rounded-md p-3" placeholder="Diameter of Saw Blade" />
+<input name="Saw Min Position" class="form-input border-gray-300 rounded-md p-3" placeholder="Minimum Position from Platten" />
+<input name="Saw Max Position" class="form-input border-gray-300 rounded-md p-3" placeholder="Maximum Position from Platten" />
+<input name="Saw Coiling Method" class="form-input border-gray-300 rounded-md p-3" placeholder="Saw coiling method" />
+
+
+<!-- ================= HANDLING SYSTEM ================= -->
+<h3 class="md:col-span-2 text-xl font-semibold pt-6 text-black">
+  Handling System
+</h3>
+
+<input name="Handling Manufacturer Date" class="form-input border-gray-300 rounded-md p-3" placeholder="Manufacturer / Date" />
+<input name="Maximum Profile Height" class="form-input border-gray-300 rounded-md p-3" placeholder="Maximum profile height" />
+<input name="Maximum Profile Width" class="form-input border-gray-300 rounded-md p-3" placeholder="Maximum profile width" />
+<input name="Runout Conveyor Width" class="form-input border-gray-300 rounded-md p-3" placeholder="Width of run-out roller conveyor" />
+<input name="Lead Out Table Length" class="form-input border-gray-300 rounded-md p-3" placeholder="Length of lead out table" />
+<input name="Runout Conveyor Length" class="form-input border-gray-300 rounded-md p-3" placeholder="Length of run-out roller conveyor" />
+<input name="Maximum Profile Length" class="form-input border-gray-300 rounded-md p-3" placeholder="Maximum profile length" />
+<input name="Minimum Stretcher Length" class="form-input border-gray-300 rounded-md p-3" placeholder="Minimum profile length (for stretcher)" />
+<input name="Pulling Force" class="form-input border-gray-300 rounded-md p-3" placeholder="Pulling force adjustable" />
+<input name="Puller Rails" class="form-input border-gray-300 rounded-md p-3" placeholder="Puller rails" />
+<input name="Inside Puller Jaw Width" class="form-input border-gray-300 rounded-md p-3" placeholder="Inside width of puller jaws" />
+<input name="Max Return Speed" class="form-input border-gray-300 rounded-md p-3" placeholder="Maximum return speed" />
+<input name="Max Removing Speed" class="form-input border-gray-300 rounded-md p-3" placeholder="Maximum removing speed" />
+<input name="Max Extrusion Speed 2" class="form-input border-gray-300 rounded-md p-3" placeholder="Maximum extrusion speed" />
+<input name="Cooling Table Length" class="form-input border-gray-300 rounded-md p-3" placeholder="Cooling table length" />
+
+<input name="Dimensions Belt T1" class="form-input border-gray-300 rounded-md p-3" placeholder="Dimensions of belt T1" />
+<input name="Dimensions Belt T2" class="form-input border-gray-300 rounded-md p-3" placeholder="Dimensions of belt T2" />
+<input name="Dimensions Belt S1" class="form-input border-gray-300 rounded-md p-3" placeholder="Dimensions of belt S1" />
+<input name="Dimensions Belt S2" class="form-input border-gray-300 rounded-md p-3" placeholder="Dimensions of belt S2" />
+<input name="Dimensions Belt S3" class="form-input border-gray-300 rounded-md p-3" placeholder="Dimensions of belt S3" />
+
+<input name="Stretching Force" class="form-input border-gray-300 rounded-md p-3" placeholder="Stretching force" />
+<input name="Saw Feed Conveyor Width" class="form-input border-gray-300 rounded-md p-3" placeholder="Width of saw feed conveyor" />
+<input name="Saw Feed Conveyor Length" class="form-input border-gray-300 rounded-md p-3" placeholder="Length of saw feed conveyor" />
+<input name="Batch Width" class="form-input border-gray-300 rounded-md p-3" placeholder="Batch width" />
+<!-- ================= ROLLER / CUTTING ================= -->
+<h3 class="md:col-span-2 text-xl font-semibold pt-6 text-black">
+  Roller & Cutting Specifications
+</h3>
+
+<input name="Roller Diameter" class="form-input border-gray-300 rounded-md p-3"
+       placeholder="Roller diameter" />
+
+<input name="Maximum Cutting Length" class="form-input border-gray-300 rounded-md p-3"
+       placeholder="Maximum cutting length" />
+
+<input name="Minimum Cutting Length Gauge" class="form-input border-gray-300 rounded-md p-3"
+       placeholder="Minimum cutting length (with gauge)" />
+
+
+<!-- ================= HANDLING SYSTEM MATERIAL ================= -->
+<h3 class="md:col-span-2 text-xl font-semibold pt-6 text-black">
+  Handling System Material
+</h3>
+
+<input name="Lead Out Table Material" class="form-input border-gray-300 rounded-md p-3"
+       placeholder="Lead out table material" />
+
+<input name="Belt T1 Material" class="form-input border-gray-300 rounded-md p-3"
+       placeholder="Materials of belt T1" />
+
+<input name="Belt T2 Material" class="form-input border-gray-300 rounded-md p-3"
+       placeholder="Materials of belt T2" />
+
+<input name="Belt S1 Material" class="form-input border-gray-300 rounded-md p-3"
+       placeholder="Materials of belt S1" />
+
+<input name="Belt S2 Material" class="form-input border-gray-300 rounded-md p-3"
+       placeholder="Materials of belt S2" />
+
+<input name="Belt S3 Material" class="form-input border-gray-300 rounded-md p-3"
+       placeholder="Materials of belt S3" />
+
+
+<!-- ================= FINISH SAW ================= -->
+<h3 class="md:col-span-2 text-xl font-semibold pt-6 text-black">
+  Finish Saw
+</h3>
+
+<input name="Finish Saw Total Length" class="form-input border-gray-300 rounded-md p-3"
+       placeholder="Total length" />
+
+<input name="Number of Rollers" class="form-input border-gray-300 rounded-md p-3"
+       placeholder="Number of rollers" />
+
+<input name="Rollers Diameter" class="form-input border-gray-300 rounded-md p-3"
+       placeholder="Rollers diameter" />
+
+<input name="Rollers Length" class="form-input border-gray-300 rounded-md p-3"
+       placeholder="Rollers length" />
+
+<input name="Rollers Useful Width" class="form-input border-gray-300 rounded-md p-3"
+       placeholder="Rollers useful width" />
+
+<input name="Profile Speed" class="form-input border-gray-300 rounded-md p-3"
+       placeholder="Profile speed" />
+
+<input name="Useful Cut Width" class="form-input border-gray-300 rounded-md p-3"
+       placeholder="Useful cut width" />
+
+<input name="Saw Diameter" class="form-input border-gray-300 rounded-md p-3"
+       placeholder="Saw diameter" />
+
+<input name="Maximum Cut Height" class="form-input border-gray-300 rounded-md p-3"
+       placeholder="Maximum cut height" />
+
+<input name="Blade Power Rotation" class="form-input border-gray-300 rounded-md p-3"
+       placeholder="Blade power (rotation)" />
+
+<input name="Blade Movement" class="form-input border-gray-300 rounded-md p-3"
+       placeholder="Blade movement" />
+
+<input name="Blade Lifting System Power" class="form-input border-gray-300 rounded-md p-3"
+       placeholder="Blade lifting system power" />
+
+<input name="Suction Power" class="form-input border-gray-300 rounded-md p-3"
+       placeholder="Suction power" />
+
+<input name="Profile Blockage" class="form-input border-gray-300 rounded-md p-3"
+       placeholder="Profile blockage" />
+
+<input name="Outfeed Belts Number" class="form-input border-gray-300 rounded-md p-3"
+       placeholder="Outfeed belts - number" />
+
+<input name="Outfeed Belts Length" class="form-input border-gray-300 rounded-md p-3"
+       placeholder="Outfeed belts length" />
+
+<input name="Outfeed Stations" class="form-input border-gray-300 rounded-md p-3"
+       placeholder="Number of outfeed stations" />
+
+<input name="Roller Material" class="form-input border-gray-300 rounded-md p-3"
+       placeholder="Roller material" />
+
+<input name="Belt Material" class="form-input border-gray-300 rounded-md p-3"
+       placeholder="Belt material" />
+
+<input name="Chips Collecting Motor Capacity" class="form-input border-gray-300 rounded-md p-3"
+       placeholder="Cutting chips collecting motor and capacity" />
+
+<input name="Finish Saw Coiling Method" class="form-input border-gray-300 rounded-md p-3"
+       placeholder="Saw coiling method" />
+      <!-- SUBMIT BUTTON -->
+      <div class="md:col-span-2 pt-6">
+        <button type="submit" 
+                class="px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition">
+          Submit Details
+        </button>
+      </div>
+
+    </form>
+
+  </div>
+
+</section>
+
+<!-- TOGGLE SCRIPT -->
+<script>
+  function toggleForm() {
+    document.getElementById("pressForm").classList.toggle("hidden");
+  }
+</script>
+
+</section>
+
+<!-- ==================== TAB 2 : SEQUENTIAL ================= -->
+
+
+<section id="sequential" class="tab-section hidden bg-white text-black">
+
+  <!-- HERO -->
+  <section class="px-4 md:px-10 py-12">
+   <h1 class="text-4xl font-bold mb-4 text-blue-700 leading-tight text-center w-full">
+  Parijat Sequential Process Diagnostics Tool (EMMT)
+  <span class="block text-xl font-semibold text-blue-700 mt-1">
+    NGSH-0208
+  </span>
+</h1>
+
+
+    <p class="max-w-5xl text-gray-700 leading-relaxed">
+      Parijat Sequential Process Diagnostics Tool, or EMMT, NGSH-0208 is software for diagnosing
+      sequential process control systems. The system displays diagnostics in Grafcet (option),
+      tabular and SFC formats. Each process has multiple steps with conditions for transitions
+      and shutdowns.
+    </p>
+  </section>
+  <!-- ====================== EMMT – ADD-ON SECTION ===================== -->
+  <section class="px-4 md:px-10 pt-10 pb-16 md:pt-12 md:pb-20 bg-[#e8f3ff]">
+
+    <h2 class="text-3xl font-semibold mb-6 text-black">
+      EMMT – Extrusion Maintenance Management Tool
+    </h2>
+
+    <p class="max-w-6xl leading-relaxed mb-6 text-black">
+      Instant interactive, intuitive visual fault diagnosis & troubleshooting tool for the maintenance team
+      to troubleshoot equipment without the PLC technician needing to analyze ladder logic. Parijat provides
+      a virtual troubleshooting roadmap which significantly reduces downtime — EMMT points directly in the
+      right direction.
+    </p>
+
+    <!-- Add-on Toggle Button -->
+    <button onclick="toggleAddOn()" 
+            class="text-blue-600 font-bold text-xl mb-4 flex items-center gap-2 focus:outline-none">
+        Add-on Options
+        <span id="addonIcon" class="transition text-blue-500">▼</span>
+    </button>
+
+    <!-- List -->
+    <ul id="addonList" class="hidden grid md:grid-cols-2 gap-4 list-decimal list-inside text-black text-lg mt-4">
+
+      <li class="hover:bg-blue-100 transition rounded-lg p-2 cursor-pointer">
+        Interfaces between ERP (SAP, etc.) such as Master Data Interface, Order Interface, Die Interfaces and Batch Interface.
+      </li>
+
+      <li class="hover:bg-blue-100 transition rounded-lg p-2 cursor-pointer">
+        Digital operator screens, dashboards for batch progress, critical monitoring, die monitoring.
+      </li>
+
+      <li class="hover:bg-blue-100 transition rounded-lg p-2 cursor-pointer">
+        Operations Management Dashboards: diagnostics, correlation insights, multivariate analysis, energy dashboards.
+      </li>
+
+      <li class="hover:bg-blue-100 transition rounded-lg p-2 cursor-pointer">
+        KPI Console: Asset KPIs, Business KPIs, Billet reports, KPI vs Golden Batch comparisons.
+      </li>
+
+      <li class="hover:bg-blue-100 transition rounded-lg p-2 cursor-pointer">
+        Automatic collection of labor, burden, billet count, alloy details, and extrusion success rates.
+      </li>
+
+      <li class="hover:bg-blue-100 transition rounded-lg p-2 cursor-pointer">
+        Downtime system module with multilingual event names and dashboard-based reporting.
+      </li>
+
+      <li class="hover:bg-blue-100 transition rounded-lg p-2 cursor-pointer">
+        Isothermal control module: auto-learn, dynamic ram speed control, extrusion ratio optimization.
+      </li>
+
+      <li class="hover:bg-blue-100 transition rounded-lg p-2 cursor-pointer">
+        Smart industrial buses like Ethernet, Profinet, DeviceNet, IO-Link to reduce wiring.
+      </li>
+
+      <li class="hover:bg-blue-100 transition rounded-lg p-2 cursor-pointer">
+        Recipe system module with die parameters, offline editing, pyrometer alignment.
+      </li>
+
+      <li class="hover:bg-blue-100 transition rounded-lg p-2 cursor-pointer">
+        Furnace control module with up to 12 zones and first-billet temperature control.
+      </li>
+
+      <li class="hover:bg-blue-100 transition rounded-lg p-2 cursor-pointer">
+        Quench control module with real-time quench rate and billet-wise graphical reporting.
+      </li>
+
+      <li class="hover:bg-blue-100 transition rounded-lg p-2 cursor-pointer">
+        Exit camera alignment module, zero calibration, hot-spot scanning.
+      </li>
+
+      <li class="hover:bg-blue-100 transition rounded-lg p-2 cursor-pointer">
+        Billet camera alarm module showing billet load temperature with press-stop capability.
+      </li>
+
+      <li class="hover:bg-blue-100 transition rounded-lg p-2 cursor-pointer">
+        Ageing station module: tracking, trends, temperature logs, remaining time, labels.
+      </li>
+
+      <li class="hover:bg-blue-100 transition rounded-lg p-2 cursor-pointer">
+        Die shop station: die life tracking, nitriding management, die lifecycle reports.
+      </li>
+
+      <li class="hover:bg-blue-100 transition rounded-lg p-2 cursor-pointer">
+        Order management: scheduling, order progress, downtime logs, recipe locking, ERP/SQL sync.
+      </li>
+
+    </ul>
+
+  </section>
+  <!-- ====================== SUITABLE PROCESSES ======================= -->
+  <section class="px-4 md:px-10 py-10 bg-blue-50 rounded-lg">
+    <h2 class="text-blue-600 font-bold text-2xl mb-4">
+      Suitable for Sample Processes
+    </h2>
+
+    <ul class="grid md:grid-cols-1 gap-3 list-disc list-inside text-black text-lg">
+      <li>Aluminum Extrusion</li>
+      <li>Rotating Machines</li>
+      <li>Vapor Control Systems</li>
+      <li>Thermal Oxidizers</li>
+      <li>Plastic Blending</li>
+      <li>Water Filtration & RO</li>
+    </ul>
+  </section>
+  <!-- ====================== IMAGES SECTION ====================== -->
+  <section class="px-4 md:px-10 py-10 grid md:grid-cols-2 gap-8">
+
+    <div class="rounded-xl h-64 flex items-center justify-center bg-white shadow">
+      <img src="Picture1.png" alt="Picture 1" class="max-h-full max-w-full object-contain">
+    </div>
+
+    <div class="rounded-xl h-64 flex items-center justify-center bg-white shadow">
+      <img src="Picture2.png" alt="Picture 2" class="max-h-full max-w-full object-contain">
+    </div>
+
+    <div class="rounded-xl h-64 flex items-center justify-center bg-white shadow md:col-span-2">
+      <img src="Picture3.png" alt="Picture 3" class="max-h-full max-w-full object-contain">
+    </div>
+
+  </section>
+  <!-- ====================== KEY FEATURES ======================= -->
+  <section class="px-4 md:px-10 py-12 bg-gray-100 rounded-lg">
+
+    <h2 class="text-2xl font-semibold mb-4 text-black">Key Features</h2>
+
+    <ul class="list-disc list-inside text-black text-lg space-y-2">
+      <li>Supports a wide range of PLCs</li>
+      <li>Configurable logic flags per step</li>
+      <li>Long-term event history</li>
+      <li>System-to-system data exchange</li>
+    </ul>
+
+  </section>
+
+</section>
+<!-- ========================== FOOTER ========================== -->
+<footer class="px-4 md:px-10 py-8 md:py-10 border-t border-slate-800 text-center text-slate-500">
+  EPOS.US ©  2026 
+</footer>
+<!-- ========================== FULL JAVASCRIPT ========================== -->
+<script>
+
+  /* TAB SWITCHING */
+  function showTab(id) {
+    document.querySelectorAll('.tab-section').forEach(sec => sec.classList.add('hidden'));
+    document.getElementById(id).classList.remove('hidden');
+
+    // Scroll to top when switching tabs
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  /* MOBILE MENU */
+  function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("hidden");
+  }
+
+  /* PRESS CONFIGURATION FORM */
+  function toggleForm() {
+    document.getElementById("pressForm").classList.toggle("hidden");
+  }
+
+  /* COMMUNICATIONS LIST (Aluminium Page) */
+  function toggleCommList() {
+    const list = document.getElementById("commList");
+    const icon = document.getElementById("commIcon");
+    list.classList.toggle("hidden");
+    icon.textContent = list.classList.contains("hidden") ? "▼" : "▲";
+  }
+
+  /* EMMT ADD-ON LIST (Sequential Page) */
+  function toggleAddOn() {
+    const list = document.getElementById("addonList");
+    const icon = document.getElementById("addonIcon");
+    list.classList.toggle("hidden");
+    icon.textContent = list.classList.contains("hidden") ? "▼" : "▲";
+  }
+</script>
+</body>
+</html>
+</body>
+</html>
